@@ -9,7 +9,7 @@
       "test": "phpunit tests"
     },
     "require": {
-        "php": "^7.3",
+        "php": "^7.3|^8.0",
         "ext-json": "*",
         "ext-mysqli": "*",
         "phpmailer/phpmailer": "^6.2",
@@ -25,7 +25,8 @@
         "symfony/http-foundation": "^5.1",
         "symfony/http-kernel": "^5.1",
         "jbroadway/urlify": "^1.2",
-        "nesbot/carbon": "^2.53"
+        "nesbot/carbon": "^2.53",
+        "tamtamchik/simple-flash": "^2.0"
     },
     "extra": {
         "installer-types": ["yeswiki-extension", "yeswiki-theme"],
