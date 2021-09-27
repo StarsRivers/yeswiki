@@ -172,7 +172,7 @@ class ApiController extends YesWikiController
      */
     public function getAllReactions()
     {
-        return new ApiResponse($this->getService(ReactionManager::class)->getAllReactions('', []));
+        return new ApiResponse($this->getService(ReactionManager::class)->getReactions('', []));
     }
 
     /**
@@ -181,7 +181,7 @@ class ApiController extends YesWikiController
     public function getReactions($id)
     {
         $id = array_map('trim', explode(',', $id));
-        return new ApiResponse($this->getService(ReactionManager::class)->getAllReactions('', $id));
+        return new ApiResponse($this->getService(ReactionManager::class)->getReactions('', $id));
     }
 
     /**
@@ -189,7 +189,7 @@ class ApiController extends YesWikiController
      */
     public function getAllReactionsFromUser($userId)
     {
-        return new ApiResponse($this->getService(ReactionManager::class)->getUserReactions($userId));
+        return new ApiResponse($this->getService(ReactionManager::class)->getReactions('', [], $userId));
     }
 
     /**
@@ -198,7 +198,7 @@ class ApiController extends YesWikiController
     public function getReactionsFromUser($userId, $id)
     {
         $id = array_map('trim', explode(',', $id));
-        return new ApiResponse($this->getService(ReactionManager::class)->getUserReactions($userId, $id));
+        return new ApiResponse($this->getService(ReactionManager::class)->getReactions('', $id, $userId));
     }
     /**
      * @Route("/api/reactions/{idreaction}/{id}/{page}/{username}", methods={"DELETE"}, options={"acl":{"public", "+"}})
@@ -263,7 +263,7 @@ class ApiController extends YesWikiController
                                         'userName' => $user['name'],
                                         'reactionId' => $_POST['reactionid'],
                                         'id' => $_POST['id'],
-                                        'date' => date('YYYY-MM-DD'),
+                                        'date' => date('Y-m-d H:i:s'),
                                     ];
                                     $this->getService(ReactionManager::class)->addUserReaction(
                                         $_POST['pagetag'],
