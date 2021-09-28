@@ -314,7 +314,7 @@ function toastMessage(
 
     var url = window.location.toString();
     let separator = '&';
-    if ((typeof aceditorBaseUrl == 'string')&& !aceditorBaseUrl.includes("?")){
+    if ((wiki && typeof wiki.baseUrl == 'string')&& !wiki.baseUrl.includes("?")){
       // rewrite mode
       separator = '?';
     }

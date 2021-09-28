@@ -57,6 +57,8 @@ window.myapp = new Vue({
     // Aceditor
     editor: null,
     displayAdvancedParams: false,
+    //
+    baseUrl: wiki.baseUrl
   },
   computed: {
     actionGroup() { return this.currentGroupId ? this.actionGroups[this.currentGroupId] : {} },
