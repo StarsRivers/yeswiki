@@ -59,28 +59,14 @@ var DATATABLE_OPTIONS = {
   ],
 };
 
-function toastMessage(
-  message,
-  duration = 3000,
-  toastClass = "alert alert-secondary-1"
-) {
-  var $toast = $(
-    '<div class="toast-message"><div class="' +
-      toastClass +
-      '">' +
-      message +
-      "</div></div>"
-  );
-  $("body").after($toast);
-  $toast.css("top", $("#yw-topnav").outerHeight(true) + 20 + "px");
-  $toast.css("opacity", 1);
-  setTimeout(function () {
-    $toast.css("opacity", 0);
-  }, duration);
-  setTimeout(function () {
-    $toast.remove();
-  }, duration + 300);
-  $toast.addClass("visible");
+function toastMessage(message, duration = 3000, toastClass = 'alert alert-secondary-1') {
+  var $toast = $('<div class="toast-message"><div class="' + toastClass + '">' + message + '</div></div>');
+  $('body').after($toast);
+  $toast.css('top', $('#yw-topnav').outerHeight(true) + 20 + 'px');
+  $toast.css('opacity', 1);
+  setTimeout(function() { $toast.css('opacity', 0) }, duration);
+  setTimeout(function() { $toast.remove() }, (duration + 300) );
+  $toast.addClass('visible');
 }
 // polyfill placeholder
 (function ($) {
