@@ -239,9 +239,10 @@ li.toc5 {
   border: 0;
 }
 /* remove first column of revisions */
-#YesWikiModal .first-revisions-selector, #YesWikiModal  .current-page-revision,
+#YesWikiModal .first-revisions-selector,
+#YesWikiModal .current-page-revision,
 body > :not(#YesWikiModal) .current-revision-text {
-  display:none;
+  display: none;
 }
 
 /* menu du haut fixe */
@@ -692,8 +693,9 @@ body {
   font-weight: bold;
   color: var(--primary-color);
 }
-.mini-react .reaction-img {
-  max-height:1.5em;
+.mini-react > img {
+  max-height: 2.5em;
+  display: inline-block;
 }
 .mini-react .reaction-emoji,
 .mini-react .reaction-fa-icons {
@@ -755,10 +757,10 @@ body {
 }
 
 .update-hint {
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-bottom: 5px;
   margin-top: 5px;
-  opacity: .9;
+  opacity: 0.9;
   font-style: italic;
   line-height: 1rem;
   text-align: justify;
@@ -785,7 +787,7 @@ body {
 
 .timeline li {
   list-style: none;
-  margin-top:2em;
+  margin-top: 2em;
 }
 
 .timeline li:before {
