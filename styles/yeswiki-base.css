@@ -757,3 +757,11 @@ body {
   line-height: 8px;
   color: var(--primary-color);
 }
+/* VUE SELECT */
+.v-select {
+  border: 2px solid var(--primary-color);
+  border-radius: 3px !important;
+}
+.v-select .vs__dropdown-toggle {
+  border: none;
+}

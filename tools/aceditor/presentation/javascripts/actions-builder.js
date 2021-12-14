@@ -27,7 +27,8 @@ const ACTIONS_BACKWARD_COMPATIBILITY = {
 console.log("actionsBuilderData", actionsBuilderData); // data variable has been defined in actions-builder.tpl.html
 
 // Declare this one globally because we use it everywhere
-Vue.component("input-hint", InputHint);
+Vue.component('input-hint', InputHint)
+Vue.component('v-select', VueSelect.VueSelect);
 
 // Handle oldbrowser not supporting ES6
 if (!("noModule" in HTMLScriptElement.prototype)) {
