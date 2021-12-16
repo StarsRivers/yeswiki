@@ -8,6 +8,7 @@ import InputIcon from "./components/InputIcon.js";
 import InputColor from "./components/InputColor.js";
 import InputFormField from "./components/InputFormField.js";
 import InputFacette from "./components/InputFacette.js";
+import InputReaction from "./components/InputReaction.js";
 import InputIconMapping from "./components/InputIconMapping.js";
 import InputColorMapping from "./components/InputColorMapping.js";
 import InputGeo from "./components/InputGeo.js";
@@ -48,6 +49,7 @@ if (!("noModule" in HTMLScriptElement.prototype)) {
       InputColor,
       InputFormField,
       InputHidden,
+      InputReaction,
       InputFacette,
       InputIconMapping,
       InputColorMapping,
@@ -167,7 +169,7 @@ if (!("noModule" in HTMLScriptElement.prototype)) {
           let fakeDom = $(`<${this.editor.currentSelectedAction}/>`)[0];
 
           for (let attribute of fakeDom.attributes)
-          Vue.set(this.values, attribute.name, attribute.value);
+            Vue.set(this.values, attribute.name, attribute.value);
 
           let newActionId = fakeDom.tagName.toLowerCase();
           // backward compatibilty
